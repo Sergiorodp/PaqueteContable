@@ -2,13 +2,15 @@
     display: grid;
     min-height: 100vh;
     min-width: 100vw;
-    background: red;
+    background: var(--principal-body-background);
     grid-template-columns: 17vw 83vw;
   }
   
 .BodyContainer{
     height: 100%;
     width: 100%;
-    background: blue;
+    padding: 2vh 1vw;
+    background: var(--principal-body-background);
     display: grid;
+    grid-template-rows: 10vh 90vh;
 }

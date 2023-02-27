@@ -6,6 +6,7 @@ import styles from './PrincipalLayout.module.css'
 // fonts
 import { Inter } from '@next/font/google'
 import LateralBar from '../PrincipalLateralBar'
+import TopBar from '../PrincipalTopBar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,6 +25,7 @@ export default function Layout( props : PrincipalLayoutProps ){
             <main className={styles.main}>
                 <LateralBar/>
                 <div className={styles.BodyContainer}>
+                    <TopBar/>
                     {props.children}
                 </div>
             </main>
