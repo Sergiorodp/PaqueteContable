@@ -1,15 +1,14 @@
 .main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
     min-height: 100vh;
     min-width: 100vw;
+    background: red;
+    grid-template-columns: 17vw 83vw;
   }
   
 .BodyContainer{
     height: 100%;
     width: 100%;
-    background: white;
+    background: blue;
     display: grid;
 }

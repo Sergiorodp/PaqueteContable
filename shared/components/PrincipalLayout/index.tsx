@@ -5,6 +5,7 @@ import styles from './PrincipalLayout.module.css'
 
 // fonts
 import { Inter } from '@next/font/google'
+import LateralBar from '../PrincipalLateralBar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,6 +22,7 @@ export default function Layout( props : PrincipalLayoutProps ){
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className={styles.main}>
+                <LateralBar/>
                 <div className={styles.BodyContainer}>
                     {props.children}
                 </div>
