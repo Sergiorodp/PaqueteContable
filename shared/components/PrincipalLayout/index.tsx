@@ -4,7 +4,7 @@ import Head from 'next/head'
 import styles from './PrincipalLayout.module.css'
 
 // fonts
-import { Inter } from '@next/font/google'
+import { Inter } from "next/font/google"
 import LateralBar from '../PrincipalLateralBar'
 import TopBar from '../PrincipalTopBar'
 
