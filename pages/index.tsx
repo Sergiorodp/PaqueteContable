@@ -1,7 +1,8 @@
-import { Inter } from '@next/font/google'
+import { Anybody, Inter } from "next/font/google"
 
 // layout
 import PrincipalLayout from '@/shared/components/PrincipalLayout/index'
+import { useEffect } from "react"
 
 export default function Home() {
   return (
