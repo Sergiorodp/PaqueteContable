@@ -1,4 +1,10 @@
-import { createAction, createReducer } from '@reduxjs/toolkit'
+import { createAction } from '@reduxjs/toolkit'
+import { CustomerData } from './initialstate'
 
-const saveCustomer = createAction('customer/saveCustomer')
+const saveCustomer = createAction<CustomerData>('customer/saveCustomer')
 const deletCustomer = createAction('customer/deleteCustomer')
+
+export {
+    saveCustomer,
+    deletCustomer
+}
