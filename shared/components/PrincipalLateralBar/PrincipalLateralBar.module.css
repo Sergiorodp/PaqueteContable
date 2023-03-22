@@ -1,8 +1,15 @@
 .LateralContainer{
-    display: grid;
-    grid-template-rows: 20vh 70vh 10vh;
+    display: flex;
     background: var(--lateral-bar-background);
     height: 100%;
     width: 100%;
-    padding: 1vh 2vw;
+    color: whitesmoke;
+}
+
+.LateralOPtions{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 20% 70% 10%;
+    padding: 10% 25%;
 }

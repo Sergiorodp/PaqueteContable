@@ -3,12 +3,6 @@ import { CustomerData, customerInitialState } from "./initialstate";
 import { deletCustomer, saveCustomer } from "./actions";
 import { action } from '../types';
 
-const counterReducer = createReducer(customerInitialState, (builder) => {
-    builder
-      .addCase(saveCustomer, saveCustomerReducer)
-      .addCase(deletCustomer, deletCustomerReducer)
-})
-
 // reducers 
 
 const saveCustomerReducer = (state: CustomerData, action : action<CustomerData>) => {
@@ -22,3 +16,10 @@ const saveCustomerReducer = (state: CustomerData, action : action<CustomerData>)
 }
 
 const deletCustomerReducer = () => {}
+
+
+export const customerReducers = createReducer(customerInitialState, (builder) => {
+    builder
+      .addCase(saveCustomer, saveCustomerReducer)
+      .addCase(deletCustomer, deletCustomerReducer)
+})

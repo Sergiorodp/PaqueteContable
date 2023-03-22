@@ -26,7 +26,9 @@ export default function Layout( props : PrincipalLayoutProps ){
                 <LateralBar/>
                 <div className={styles.BodyContainer}>
                     <TopBar/>
-                    {props.children}
+                    <section className={styles.BodySectionContainer}>
+                        {props.children}
+                    </section>
                 </div>
             </main>
         </>
