@@ -1,12 +1,12 @@
-import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import { customerReducers } from "./customer/reducers";
 import { PUCReducers } from "./PUC/reducers";
 
 export const store = configureStore({
-    reducer : combineReducers({
+    reducer : {
         PUC : PUCReducers,
         customer : customerReducers
-    })
+    }
 })
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

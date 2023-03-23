@@ -2,13 +2,23 @@ import { createReducer } from '@reduxjs/toolkit'
 import { PUCinitialState, PUCtype } from "./initialstate";
 import { savePUC} from "./actions";
 import { action } from '../types';
-import { stat } from 'fs';
+import { DocumentNode, useQuery } from '@apollo/client';
+import { getPUCs } from "./thunks";
 
-const savePUCReducer = (state : PUCtype[], action : action<PUCtype[]>) => {
+type CodesPayload = {
+  getCodes : PUCtype[]
+}
+
+const SavePUCReducer = (state : PUCtype[], action : action<PUCtype[]>) => {
     state = action.payload
     return state
 }
 
 export const PUCReducers = createReducer(PUCinitialState, (builder) => {
-    builder.addCase(savePUC, savePUCReducer)
+    builder
+      .addCase(savePUC, SavePUCReducer)
+      .addCase(getPUCs.fulfilled, (state : PUCtype[], action : action<CodesPayload>) => {
+        state = action.payload.getCodes
+        return state
+      })
 })
