@@ -1,9 +1,14 @@
 .LateralContainer{
     display: flex;
     background: var(--lateral-bar-background);
-    height: 100%;
+    height: 97%;
     width: 100%;
     color: whitesmoke;
+    position: relative;
+    left: 2vw;
+    justify-self: center;
+    align-self: center;
+    border-radius: 20px;
 }
 
 .LateralOPtions{
@@ -12,4 +17,5 @@
     display: grid;
     grid-template-rows: 20% 70% 10%;
     padding: 10% 25%;
+
 }
